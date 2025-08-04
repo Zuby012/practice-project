@@ -1,0 +1,75 @@
+<div class="slide" style="display:block;">
+    <div class="question">
+        <strong>1. What is 5 + 7?</strong>
+    </div>
+    <ul class="options">
+        <li><label><input type="radio" name="q1" value="10"> 10</label></li>
+        <li><label><input type="radio" name="q1" value="11"> 11</label></li>
+        <li><label><input type="radio" name="q1" value="12"> 12</label></li>
+        <li><label><input type="radio" name="q1" value="13"> 13</label></li>
+    </ul>
+    <div style="display: flex; justify-content: flex-end;">
+        <button type="button" class="submit-btn" onclick="nextSlide()">Next</button>
+    </div>
+</div>
+<div class="slide" style="display:none;">
+    <div class="question">
+        <strong>2. What is the capital of France?</strong>
+    </div>
+    <ul class="options">
+        <li><label><input type="radio" name="q2" value="London"> London</label></li>
+        <li><label><input type="radio" name="q2" value="Berlin"> Berlin</label></li>
+        <li><label><input type="radio" name="q2" value="Paris"> Paris</label></li>
+        <li><label><input type="radio" name="q2" value="Madrid"> Madrid</label></li>
+    </ul>
+    <div style="display: flex; justify-content: space-between;">
+        <button type="button" class="submit-btn" onclick="prevSlide()">Previous</button>
+        <button type="button" class="submit-btn" onclick="nextSlide()">Next</button>
+    </div>
+</div>
+<div class="slide" style="display:none;">
+    <div class="question">
+        <strong>3. Which planet is known as the Red Planet?</strong>
+    </div>
+    <ul class="options">
+        <li><label><input type="radio" name="q3" value="Earth"> Earth</label></li>
+        <li><label><input type="radio" name="q3" value="Mars"> Mars</label></li>
+        <li><label><input type="radio" name="q3" value="Jupiter"> Jupiter</label></li>
+        <li><label><input type="radio" name="q3" value="Venus"> Venus</label></li>
+    </ul>
+    <div style="display: flex; justify-content: space-between;">
+        <button type="button" class="submit-btn" onclick="prevSlide()">Previous</button>
+        <button type="button" class="submit-btn" onclick="nextSlide()">Next</button>
+    </div>
+</div>
+<div class="slide" style="display:none;">
+    <div class="question">
+        <strong>4. Who wrote 'Romeo and Juliet'?</strong>
+    </div>
+    <ul class="options">
+        <li><label><input type="radio" name="q4" value="William Shakespeare"> William Shakespeare</label>
+        </li>
+        <li><label><input type="radio" name="q4" value="Charles Dickens"> Charles Dickens</label></li>
+        <li><label><input type="radio" name="q4" value="Jane Austen"> Jane Austen</label></li>
+        <li><label><input type="radio" name="q4" value="Mark Twain"> Mark Twain</label></li>
+    </ul>
+    <div style="display: flex; justify-content: space-between;">
+        <button type="button" class="submit-btn" onclick="prevSlide()">Previous</button>
+        <button type="button" class="submit-btn" onclick="nextSlide()">Next</button>
+    </div>
+</div>
+<div class="slide" style="display:none;">
+    <div class="question">
+        <strong>5. What is the largest ocean on Earth?</strong>
+    </div>
+    <ul class="options">
+        <li><label><input type="radio" name="q5" value="Atlantic Ocean"> Atlantic Ocean</label></li>
+        <li><label><input type="radio" name="q5" value="Indian Ocean"> Indian Ocean</label></li>
+        <li><label><input type="radio" name="q5" value="Pacific Ocean"> Pacific Ocean</label></li>
+        <li><label><input type="radio" name="q5" value="Arctic Ocean"> Arctic Ocean</label></li>
+    </ul>
+    <div style="display: flex; justify-content: space-between;">
+        <button type="button" class="submit-btn" onclick="prevSlide()">Previous</button>
+        <button class="submit-btn" type="submit">Submit Test</button>
+    </div>
+</div>

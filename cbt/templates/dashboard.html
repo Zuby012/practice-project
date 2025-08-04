@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - CBT Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <header>Welcome, Student!</header>
+    <div class="container">
+        <h2>Available Tests</h2>
+        <ul class="dashboard-list">
+            <li>
+                <span>Mathematics Test</span>
+                <a href="/test">Start Test</a>
+            </li>
+            <li>
+                <span>English Language Test</span>
+                <a href="/test">Start Test</a>
+            </li>
+            <li>
+                <span>General Science Test</span>
+                <a href="/test">Start Test</a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
