@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form id="signupForm" action="/reg" method="post">
+            <div class="form-step" id="step-1">
+                <input type="text" name="username" placeholder="Username" required><br>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+            <div class="form-step" id="step-2" style="display:none;">
+                <input type="text" name="firstname" placeholder="First Name" required><br>
+                <input type="text" name="lastname" placeholder="Last Name" required><br>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+            <div class="form-step" id="step-4" style="display:none;">
+                <input type="date" name="dob" placeholder="Date of Birth" required><br>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+            <div class="form-step" id="step-5" style="display:none;">
+                <input type="email" name="email" placeholder="Email" required><br>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+            <div class="form-step" id="step-6" style="display:none;">
+                <input type="tel" name="phone" placeholder="Phone Number" required><br>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+            <div class="form-step" id="step-7" style="display:none;">
+                <input type="text" name="nationality" placeholder="Nationality" required><br>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+            <div class="form-step" id="step-8" style="display:none;">
+                <select name="gender" class="styled-select" required>
+                    <option value="" disabled selected>Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select><br>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+            <div class="form-step" id="step-9" style="display:none;">
+                <input type="password" name="password" placeholder="Password" required><br>
+                <input type="password" name="confirm_password" placeholder="Confirm Password" required><br>
+                <button type="submit">Sign Up</button>
+            </div>
+        </form>
+        <script>
+            const steps = document.querySelectorAll('.form-step');
+            const nextBtns = document.querySelectorAll('.next-btn');
+            let currentStep = 0;
+            nextBtns.forEach((btn, idx) => {
+                btn.addEventListener('click', function () {
+                    // Validate current input before moving to next
+                    const input = steps[idx].querySelector('input, select');
+                    if (input && !input.checkValidity()) {
+                        input.reportValidity();
+                        return;
+                    }
+                    steps[idx].style.display = 'none';
+                    steps[idx + 1].style.display = 'block';
+                });
+            });
+            // Password match validation on submit
+            document.getElementById('signupForm').addEventListener('submit', function (e) {
+                const pwd = this.querySelector('input[name="password"]');
+                const cpwd = this.querySelector('input[name="confirm_password"]');
+                if (pwd.value !== cpwd.value) {
+                    e.preventDefault();
+                    cpwd.setCustomValidity("Passwords do not match");
+                    cpwd.reportValidity();
+                    cpwd.setCustomValidity("");
+                }
+            });
+        </script>
+        <p>Already have an account? <a href="/login">Login here</a></p>
+    </div>
+</body>
+
+</html>

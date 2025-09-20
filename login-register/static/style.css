@@ -1,0 +1,120 @@
+body {
+    background: linear-gradient(135deg, #1976d2 0%, #42a5f5 100%);
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.container {
+    background: #fff;
+    max-width: 350px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 36px 28px 28px 28px;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(25, 118, 210, 0.15);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+h2 {
+    color: #1976d2;
+    margin-bottom: 24px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="email"],
+input[type="tel"],
+input[name="confirm_password"],
+select.styled-select {
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0 18px 0;
+    border: 1px solid #90caf9;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.2s;
+    background: #fff;
+    color: #333;
+}
+
+select.styled-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%231976d2" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 24px 24px;
+    cursor: pointer;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select.styled-select:focus {
+    border: 1.5px solid #1976d2;
+}
+
+select.styled-select {
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0 18px 0;
+    border: 1px solid #90caf9;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    background: #fff;
+    color: #333;
+    transition: border 0.2s;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+select.styled-select:focus {
+    border: 1.5px solid #1976d2;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border: 1.5px solid #1976d2;
+}
+
+button {
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    padding: 10px 0;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #1565c0;
+}
+
+a {
+    color: #1976d2;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

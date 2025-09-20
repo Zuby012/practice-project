@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test - CBT Platform</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+
+<body>
+    <header>General-sci</header>
+    <div class="container">
+        <form id="testForm" action="/result" method="post">
+            {% for item in dynamic_items %}
+            {{ item|safe }}
+            {% endfor %}
+        </form>
+    </div>
+    <script>
+        let currentSlide = 0;
+        const slides = document.getElementsByClassName('slide');
+
+        function showSlide(n) {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = (i === n) ? 'block' : 'none';
+            }
+            currentSlide = n;
+        }
+
+        function nextSlide() {
+            if (currentSlide < slides.length - 1) {
+                showSlide(currentSlide + 1);
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 0) {
+                showSlide(currentSlide - 1);
+            }
+        }
+    </script>
+</body>
+
+</html>
